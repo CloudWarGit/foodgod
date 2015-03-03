@@ -1,45 +1,21 @@
 <fa-app style="height: 568px; width: 320px; margin: 0;">
-  <fa-surface fa-background-color="'#FFF'"></fa-surface>
-  <!--
-  <fa-header-footer-layout>
-    <fa-surface fa-size="[undefined, 30]" fa-background-color="'#F00'">Header</fa-surface>
-    <fa-surface fa-size="[undefined, 100]" fa-background-color="'#0F0'">Content</fa-surface>
-    <!--
-    <fa-surface fa-size="[undefined, 30]" fa-background-color="'#00F'">Footer</fa-surface>
-
-
-    <fa-grid-layout fa-size="[undefined, 30]" fa-options="footerGridLayoutOptions">
-      <fa-modifier ng-repeat="grid in grids">
-        <fa-surface fa-background-color="grid.bgColor"></fa-surface>
-      </fa-modifier>
-    </fa-grid-layout>
-
-  </fa-header-footer-layout>
--->
-
 	<fa-header-footer-layout>
-
 		<fa-modifier fa-size="[undefined, 50]">
 			<fa-surface fa-background-color="'#dc322f'">
 			  Header
 			</fa-surface>
 		</fa-modifier>
-		<fa-modifier >
-			<fa-surface fa-background-color="'#859900'">
-			  Footer
+
+		<fa-modifier fa-size="[undefined, undefined]">
+			<fa-surface>
+				<ng-include ng-attr-src='getSrc()'></ng-include>
 			</fa-surface>
 		</fa-modifier>
 
-        <fa-modifier  fa-size="[undefined, 75]">
-		<fa-grid-layout fa-options="footerGridLayoutOptions">
-			<fa-modifier ng-repeat="item in grids">
-				<fa-surface fa-background-color="item.bgColor">
-					{{item.content}}
-				</fa-surface>
-			</fa-modifier>
-		</fa-grid-layout>
+        <fa-modifier fa-size="[undefined, 50]">
+		    <fa-render-node fa-node="tabBar" id="tabBar">
+		    
+		    </fa-render-node>
 		</fa-modifier>
-
-	
-
+	</fa-header-footer-layout>	
 </fa-app>

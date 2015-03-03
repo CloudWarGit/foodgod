@@ -20,3 +20,7 @@ body {
     left: 0;
     right: 0;
 }
+
+.tabbuton{font-family:arial;font-weight:700;text-align:center;line-height:50px;color:#fff;background-color:#3B89F6}
+.tabbutoff{font-family:arial;font-weight:400;line-height:50px;text-align:center;color:gray;background-color:#0D4BA1}
+.navigation{font-family:arial;font-weight:700;font-size:18pt;line-height:75px;text-align:center;background-color:#00f;color:#fff}
