@@ -21,6 +21,16 @@ angular.module('famousAngularStarter',
         url: '/friends',
         templateUrl: 'partials/friends.html'
         //controller: 'MainCtrl'
+      })
+      .state('home.message', {
+        url: '/message',
+        templateUrl: 'partials/messages.html'
+        //controller: 'MainCtrl'
+      })
+      .state('home.mymenu', {
+        url: '/mymenu',
+        templateUrl: 'partials/mymenu.html'
+        //controller: 'MainCtrl'
       });
 
     $urlRouterProvider.otherwise('/');
