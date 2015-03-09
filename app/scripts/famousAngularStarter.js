@@ -4,7 +4,7 @@ angular.module('famousAngularStarter',
   ['ngAnimate', 'ngCookies',
     'ngTouch', 'ngSanitize',
     'ngResource', 'ui.router',
-    'famous.angular'])
+    'famous.angular', 'ui.bootstrap'])
   .config(function($stateProvider, $urlRouterProvider){
     $stateProvider
       .state('home', {
@@ -14,8 +14,8 @@ angular.module('famousAngularStarter',
       })
       .state('home.found', {
         url: '/found',
-        templateUrl: 'partials/found.html'
-        //controller: 'MainCtrl'
+        templateUrl: 'partials/found.html',
+        controller: 'foundController'
       })
       .state('home.friends', {
         url: '/friends',
@@ -34,5 +34,4 @@ angular.module('famousAngularStarter',
       });
 
     $urlRouterProvider.otherwise('/');
-  })
-;
+  });

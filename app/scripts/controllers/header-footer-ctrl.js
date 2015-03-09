@@ -10,7 +10,7 @@ angular.module('famousAngularStarter')
 
     //实例化导航栏
     $scope.navBar = new NavBar({size: [undefined, 50],
-         content: 'dW Famo.us',
+         content: '发现',
          moreContent: '',
          backContent: '<img src="images/reg/back.png">',
          properties: {
@@ -25,7 +25,7 @@ angular.module('famousAngularStarter')
 	$scope.tabBar.defineSection(2,{content: 'Mssages', onClasses: ['tabbuton'], offClasses: ['tabbutoff']});
 	$scope.tabBar.defineSection(3,{content: 'MyMenu', onClasses: ['tabbuton'], offClasses: ['tabbutoff']});
     //初始化启动时，默认选择第一个tab，即进入found页面
-    $scope.navBar.setContent("发现");
+    //$scope.navBar.setContent("发现");
     $scope.tabBar.select(0);
     $state.go('home.found');
 
