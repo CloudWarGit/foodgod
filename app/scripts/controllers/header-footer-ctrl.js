@@ -11,7 +11,7 @@ angular.module('famousAngularStarter')
     //实例化导航栏
     $scope.navBar = new NavBar({size: [undefined, 50],
          content: '发现',
-         moreContent: '',
+         moreContent: '<img src="images/reg/more.png">',
          backContent: '<img src="images/reg/back.png">',
          properties: {
              lineHeight: '75px'

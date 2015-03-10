@@ -19,8 +19,8 @@ angular.module('famousAngularStarter',
       })
       .state('home.friends', {
         url: '/friends',
-        templateUrl: 'partials/friends.html'
-        //controller: 'MainCtrl'
+        templateUrl: 'partials/friends.html',
+        controller: 'friendsController'
       })
       .state('home.message', {
         url: '/message',
