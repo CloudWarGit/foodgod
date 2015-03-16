@@ -22,7 +22,7 @@ angular.module('famousAngularStarter')
       text: '大脸猫'
     });
 
-    console.log(slides);
+    //console.log(slides);
     //setInterval(function() {console.log($scope.myInterval);}, 1000);
 });
 

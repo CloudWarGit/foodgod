@@ -1,12 +1,23 @@
 <fa-surface fa-background-color="'gray'">
-	<div>
-	    <carousel interval="myInterval">
-	        <slide ng-repeat="slide in slides" active="slide.active">
-	            <img ng-src="{{slide.image}}" style="margin:auto;">
-	            <div class="carousel-caption">
-	                <p>{{slide.text}}</p>
-	            </div>
-	        </slide>
-	    </carousel>
-	</div>
+	<fa-app style="width: 375px; height: 140px;">
+		<fa-modifier fa-size="[375, 140]">
+			<fa-surface>
+				<div>
+					<carousel interval="myInterval">
+						<slide ng-repeat="slide in slides" active="slide.active">
+							<img ng-src="{{slide.image}}" style="margin:auto;">
+							<div class="carousel-caption">
+								<p>{{slide.text}}</p>
+							</div>
+						</slide>
+					</carousel>
+				</div>
+			</fa-surface>
+		</fa-modifier>
+	</fa-app>
+	<fa-app style="width: 375px; height: 267px;">
+		<fa-scroll-view>
+		</fa-scroll-view>
+	</fa-app>
 </fa-surface>
+
