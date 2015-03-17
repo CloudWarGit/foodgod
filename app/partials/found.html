@@ -1,5 +1,5 @@
 <fa-surface fa-background-color="'gray'">
-	<fa-app style="width: 375px; height: 140px;">
+	<fa-app style="width: 375px; height: 140px;" ng-controller="carouselController">
 		<fa-modifier fa-size="[375, 140]">
 			<fa-surface>
 				<div>
@@ -15,9 +15,28 @@
 			</fa-surface>
 		</fa-modifier>
 	</fa-app>
-	<fa-app style="width: 375px; height: 267px;">
+	<fa-app style="width: 375px; height: 427px;" ng-controller="scrollController">
+	
 		<fa-scroll-view>
-		</fa-scroll-view>
+			<fa-view ng-repeat="view in items">
+			
+				<fa-image-surface fa-image-url=" {{view.image}} "
+             class="img"
+             fa-color="'blue'"
+             fa-background-color="'#fff'"
+             fa-size="[375, 200]">
+         		</fa-iamge-surface>-->			
+				<fa-modifier fa-size="[375, 427]">
+					<fa-surface fa-background-color="'view.color'">
+						{{view.content}}
+					</fa-surface>
+				</fa-modifier>
+			</fa-view>
+		</fa-scroll-view>-->
+	<!--	
+		<fa-surface>
+		<button>11</button>
+		</fa-surface>-->
 	</fa-app>
 </fa-surface>
 
