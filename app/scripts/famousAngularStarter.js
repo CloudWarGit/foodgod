@@ -27,9 +27,9 @@ angular.module('famousAngularStarter',
         templateUrl: 'partials/messages.html'
         //controller: 'MainCtrl'
       })
-      .state('home.mymenu', {
-        url: '/mymenu',
-        templateUrl: 'partials/mymenu.html'
+      .state('home.myinfo', {
+        url: '/myinfo',
+        templateUrl: 'partials/myinfo.html'
         //controller: 'MainCtrl'
       });
 

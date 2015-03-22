@@ -37,7 +37,7 @@ angular.module('famousAngularStarter')
             offClasses: ['tabbutoff']
         });
         $scope.tabBar.defineSection(3, {
-            content: 'MyMenu',
+            content: '我',
             onClasses: ['tabbuton'],
             offClasses: ['tabbutoff']
         });
@@ -64,7 +64,7 @@ angular.module('famousAngularStarter')
                     $scope.navBar.setContent("消息");
                     break;
                 case 3:
-                    $state.go('home.mymenu');
+                    $state.go('home.myinfo');
                     $scope.navBar.setContent("菜谱");
                     break;
             }

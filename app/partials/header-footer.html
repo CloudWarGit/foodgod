@@ -5,11 +5,17 @@
 		    </fa-render-node>
 		</fa-modifier>
 
+		<fa-container-surface fa-options="{size: [375, 567], properties: {overflow: 'hidden'}}">
 		<fa-modifier fa-size="[undefined, undefined]">
-
-				<div ui-view></div>
+		<!--
+			<fa-surface class="famous-angular-clipping-container">
+				<fa-app style="height: 567px; width: 375px; margin: 0;">-->
+					<div ui-view></div>
+		<!--		</fa-app>
+			</fa-surface>-->	
 
 		</fa-modifier>
+		</fa-container-surface>
 
         <fa-modifier fa-size="[undefined, 50]">
 		    <fa-render-node fa-node="tabBar" id="tabBar">		    
