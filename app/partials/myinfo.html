@@ -1,15 +1,10 @@
-<fa-modifier fa-size="[375, 567]">
-<fa-surface fa-background-color="'white'">
-</fa-surface>
+<fa-surface fa-background-color="'white'"></fa-surface>
+
+<fa-container-surface fa-options="{size: [undefined, undefined], properties: {position: relative}}">
+<fa-modifier fa-size="[undefined, 113]" fa-align="[0,0]">
+	<div ui-view="something"></div>
 </fa-modifier>
-
-	
-<fa-grid-layout ng-controller="myInfoController" fa-options="myInfoGrid">
-  <fa-modifier ng-repeat="item in tabs">
-    <fa-surface fa-background-color="item.bgColor" fa-color="'#fff'" fa-tap>
-      {{item.content}}
-    </fa-surface>
-  </fa-modifier>
-</fa-grid-layout>
-
-
+<fa-modifier fa-size="[undefined, 454]" fa-align="[0,0.2]">
+	<div ui-view="grid" ></div>
+</fa-modifier>
+</fa-container-surface>

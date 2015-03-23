@@ -18,7 +18,7 @@ angular.module('famousAngularStarter')
 		};
 
 		items.push(item);
-		items.push(item1);
+		//items.push(item1);
 
 		//console.log(slides);
 		//setInterval(function() {console.log($scope.myInterval);}, 1000);

@@ -28,8 +28,22 @@ angular.module('famousAngularStarter',
         //controller: 'MainCtrl'
       })
       .state('home.myinfo', {
+        abstract: true,
         url: '/myinfo',
         templateUrl: 'partials/myinfo.html'
+        //controller: 'MainCtrl'
+      }).state('home.myinfo.views', {
+        views: {
+          'something': {
+            templateUrl: 'partials/myinfo-top.html',
+          },
+          'grid': {
+            templateUrl: 'partials/myinfo-grid.html'
+          }
+        }
+
+        //url: '/message',
+        //templateUrl: 'partials/messages.html'
         //controller: 'MainCtrl'
       });
 

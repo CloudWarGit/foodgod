@@ -64,7 +64,7 @@ angular.module('famousAngularStarter')
                     $scope.navBar.setContent("消息");
                     break;
                 case 3:
-                    $state.go('home.myinfo');
+                    $state.go('home.myinfo.views');
                     $scope.navBar.setContent("菜谱");
                     break;
             }
