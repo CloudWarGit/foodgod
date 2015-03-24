@@ -1,10 +1,15 @@
-<fa-surface fa-background-color="'white'"></fa-surface>
+<!-- <fa-surface fa-background-color="'white'"></fa-surface> -->
 
-<fa-container-surface fa-options="{size: [undefined, undefined], properties: {position: relative}}">
-<fa-modifier fa-size="[undefined, 113]" fa-align="[0,0]">
+<fa-surface>
+<fa-app style="height: 113px; width: 375px; margin: 0; background-color="black"">
+<fa-modifier fa-size="[375, 113]" >
 	<div ui-view="something"></div>
 </fa-modifier>
-<fa-modifier fa-size="[undefined, 454]" fa-align="[0,0.2]">
+</fa-app>
+
+<fa-app style="height: 454; width: 375px; margin: 0;">
+<fa-modifier fa-size="[375, 454]" >
 	<div ui-view="grid" ></div>
 </fa-modifier>
-</fa-container-surface>
+</fa-app>
+</fa-surface>

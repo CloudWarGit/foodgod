@@ -1,11 +1,13 @@
 
 
-	
+
+
 <fa-grid-layout ng-controller="myInfoController" fa-options="myInfoGrid">
-  <fa-modifier ng-repeat="item in tabs">
-    <fa-surface fa-background-color="item.bgColor" fa-color="'#fff'" fa-tap>
+  <fa-modifier fa-size="[undefined, undefined]" ng-controller="myInfoController" ng-repeat="item in tabs">
+    <fa-surface id="item.id" fa-background-color="item.bgColor" fa-color="'#fff'" fa-tap="tapHandler($event)">
       {{item.content}}
     </fa-surface>
   </fa-modifier>
 </fa-grid-layout>
+
 

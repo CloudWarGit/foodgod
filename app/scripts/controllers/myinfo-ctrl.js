@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('famousAngularStarter')
-  .controller('myInfoController', ['$scope', function($scope) {
+  .controller('myInfoController', ['$scope', '$state', '$location', function($scope, $state, $location) {
+
+	//var EventHandler = $famous['famous/core/EventHandler'];
 
 	$scope.myInfoGrid = {
 		dimensions: [2,2],
@@ -33,18 +35,13 @@ angular.module('famousAngularStarter')
 	};
 
 	tabs.push(tab0,tab1,tab2,tab3);
-	//tabs.push(tab1);
-	//tabs.push(tab2);
-	//tabs.push(tab3);
+	console.log($location.url());
 
- /*
-    $scope.list = [
-      {content:"hello", bgColor: "#b58900"},
-      {content:"world", bgColor: "#cb4b16"},
-      {content: "famous", bgColor: "#dc322f"},
-      {content: "angular", bgColor: "#d33682"},
-      {content: "is", bgColor: "#6c71c4"},
-      {content: "-----cool!", bgColor: "#268bd2"}
-    ];
-*/
+	$scope.tapHandler = function ($event) {
+		//$location.path('partials/createmenu.html');
+		console.log($location.url());
+		$scope.state = "home.createmenu";
+		$scope.$emit('abc',$scope.state);
+	};
+
   }]);

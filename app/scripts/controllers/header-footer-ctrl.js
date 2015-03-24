@@ -69,6 +69,11 @@ angular.module('famousAngularStarter')
                     break;
             }
         });
+
+        $scope.$on('abc', function(state, data){
+            console.log("aaa");
+            $state.go(data);
+        });
     });
 
 

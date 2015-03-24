@@ -41,11 +41,11 @@ angular.module('famousAngularStarter',
             templateUrl: 'partials/myinfo-grid.html'
           }
         }
-
-        //url: '/message',
-        //templateUrl: 'partials/messages.html'
+      }).state('home.createmenu', {
+        url: '/createmenu',
+        templateUrl: 'partials/createmenu.html'
         //controller: 'MainCtrl'
       });
 
-    $urlRouterProvider.otherwise('/');
+    //$urlRouterProvider.otherwise('/');
   });
