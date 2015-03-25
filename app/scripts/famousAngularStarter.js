@@ -44,7 +44,15 @@ angular.module('famousAngularStarter',
       }).state('home.createmenu', {
         url: '/createmenu',
         templateUrl: 'partials/createmenu.html'
-        //controller: 'MainCtrl'
+      }).state('home.newdp', {
+        url: '/newdinnerparty',
+        templateUrl: 'partials/newdinnerparty.html'
+      }).state('home.mymenulist', {
+        url: '/mymenulist',
+        templateUrl: 'partials/mymenulist.html'
+      }).state('home.mydplist', {
+        url: '/mydplist',
+        templateUrl: 'partials/mydplist.html'
       });
 
     //$urlRouterProvider.otherwise('/');

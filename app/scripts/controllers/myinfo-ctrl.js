@@ -40,9 +40,24 @@ angular.module('famousAngularStarter')
 	$scope.tapHandler = function ($event) {
 		//$location.path('partials/createmenu.html');
 		//console.log($event.target);
-		console.log($scope.$index);
-		$scope.state = "home.createmenu";
-		$scope.$emit('abc',$scope.state);
+		var target = $scope.$index;
+		var state = "";
+		switch (target) {
+			case 0:
+				state = "home.createmenu";
+				break;
+			case 1:
+				state = "home.newdp";
+				break;
+			case 2:
+				state = "home.mymenulist";
+				break;
+			case 3:
+				state = "home.mydplist";
+				break;
+		}
+		
+		$scope.$emit('abc',state);
 	};
 
   }]);
