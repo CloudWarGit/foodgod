@@ -71,7 +71,7 @@ angular.module('famousAngularStarter')
         });
 
         $scope.$on('abc', function(state, data){
-            console.log("aaa");
+            //console.log(data);
             $state.go(data);
         });
     });

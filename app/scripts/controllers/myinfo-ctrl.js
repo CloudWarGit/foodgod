@@ -35,11 +35,12 @@ angular.module('famousAngularStarter')
 	};
 
 	tabs.push(tab0,tab1,tab2,tab3);
-	console.log($location.url());
+	//console.log($location.url());
 
 	$scope.tapHandler = function ($event) {
 		//$location.path('partials/createmenu.html');
-		console.log($location.url());
+		//console.log($event.target);
+		console.log($scope.$index);
 		$scope.state = "home.createmenu";
 		$scope.$emit('abc',$scope.state);
 	};
