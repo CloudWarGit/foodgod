@@ -57,7 +57,7 @@ angular.module('famousAngularStarter')
 				break;
 		}
 		
-		$scope.$emit('abc',state);
+		$scope.$emit('goto',state);
 	};
 
   }]);

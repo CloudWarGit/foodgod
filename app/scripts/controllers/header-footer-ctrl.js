@@ -70,9 +70,10 @@ angular.module('famousAngularStarter')
             }
         });
 
-        $scope.$on('abc', function(state, data){
+        $scope.$on('goto', function(state, data){
             //console.log(data);
             $state.go(data);
+            //$scope.navBar.setOptions({backContent: "",});
         });
     });
 
