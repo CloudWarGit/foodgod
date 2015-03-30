@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('famousAngularStarter')
-    .controller('headerFooterCtrl', function($scope, $famous, $state) {
+    .controller('headerFooterCtrl', function($scope, $famous, $state, navBarSrv) {
 
         //调用famo.us库（TabBar、EventHandler）
         var NavBar = $famous['famous/widgets/NavigationBar'];
@@ -12,12 +12,19 @@ angular.module('famousAngularStarter')
         $scope.navBar = new NavBar({
             size: [undefined, 50],
             content: '发现',
-            moreContent: '<img src="images/reg/more.png">',
-            backContent: '<img src="images/reg/back.png">',
+            moreContent: '',
+            backContent: '',
             properties: {
                 lineHeight: '75px'
             }
         });
+
+
+        navBarSrv.setBack($scope.navBar, true);
+        //navBarSrv.setBack($scope.navBar, false);
+        navBarSrv.setMore($scope.navBar, true);
+        //$scope.navBar.setOptions({moreContent: '<img src="images/reg/more.png">'});
+
 
         //实例化TabBar，创建4个tab
         $scope.tabBar = new TabBar({});

@@ -17124,7 +17124,7 @@ function NavigationBar(options) {
             this.more.setOptions({classes: this.options.classes.concat(this.options.moreClasses)});
         }
         else if (key === 'moreContent') {
-            this.more.setContent(this.options.content);
+            this.more.setContent(this.options.moreContent);
         }
     }.bind(this));
 }
