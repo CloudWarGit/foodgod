@@ -1,15 +1,19 @@
 'use strict';
 
 angular.module('famousAngularStarter')
-    .controller('headerFooterCtrl', function($scope, $famous, $state, navBarSrv) {
+    .controller('headerFooterCtrl', function($scope, $famous, $state, navBarSrv, $rootScope) {
+
+        var state='';
+        //var Page = stateSrv.stateChange(navBar);
 
         //调用famo.us库（TabBar、EventHandler）
         var NavBar = $famous['famous/widgets/NavigationBar'];
         var TabBar = $famous['famous/widgets/TabBar'];
         var EventHandler = $famous['famous/core/EventHandler'];
+        
 
         //实例化导航栏
-        $scope.navBar = new NavBar({
+        var navBar = $scope.navBar = new NavBar({
             size: [undefined, 50],
             content: '发现',
             moreContent: '',
@@ -19,31 +23,37 @@ angular.module('famousAngularStarter')
             }
         });
 
+        $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
 
-        navBarSrv.setBack($scope.navBar, true);
-        //navBarSrv.setBack($scope.navBar, false);
-        navBarSrv.setMore($scope.navBar, true);
-        //$scope.navBar.setOptions({moreContent: '<img src="images/reg/more.png">'});
+                    var curState = toState.name;
+                    if((curState=='home.found')||(curState=='home.found')||(curState=='home.friends')||(curState=='home.message')||(curState=='home.myinfo.views')){
+                        navBarSrv.setBack(navBar, false);
+                    }else{
+                        navBarSrv.setBack(navBar, true);
+                        state = fromState.name;
+                    }
+        });
+
 
 
         //实例化TabBar，创建4个tab
-        $scope.tabBar = new TabBar({});
-        $scope.tabBar.defineSection(0, {
+        var tabBar = $scope.tabBar = new TabBar({});
+        tabBar.defineSection(0, {
             content: 'Found',
             onClasses: ['tabbuton'],
             offClasses: ['tabbutoff']
         });
-        $scope.tabBar.defineSection(1, {
+        tabBar.defineSection(1, {
             content: 'Friends',
             onClasses: ['tabbuton'],
             offClasses: ['tabbutoff']
         });
-        $scope.tabBar.defineSection(2, {
+        tabBar.defineSection(2, {
             content: 'Mssages',
             onClasses: ['tabbuton'],
             offClasses: ['tabbutoff']
         });
-        $scope.tabBar.defineSection(3, {
+        tabBar.defineSection(3, {
             content: '我',
             onClasses: ['tabbuton'],
             offClasses: ['tabbutoff']
@@ -77,11 +87,17 @@ angular.module('famousAngularStarter')
             }
         });
 
-        $scope.$on('goto', function(state, data){
+        $scope.$on('goto', function(event, data){
             //console.log(data);
             $state.go(data);
             //$scope.navBar.setOptions({backContent: "",});
         });
+
+        //console.log(state);
+        var tbHandler = new EventHandler();
+        tbHandler.subscribe(navBar);
+        tbHandler.on('back', function(){
+            $state.go(state);
+        });
+        
     });
-
-
