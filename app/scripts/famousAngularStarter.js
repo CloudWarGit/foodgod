@@ -44,6 +44,9 @@ angular.module('famousAngularStarter',
       }).state('home.createmenu', {
         url: '/createmenu',
         templateUrl: 'partials/createmenu.html'
+      }).state('home.selectfood', {
+        url: '/selectfood',
+        templateUrl: 'partials/selectfood.html'
       }).state('home.newdp', {
         url: '/newdinnerparty',
         templateUrl: 'partials/newdinnerparty.html'

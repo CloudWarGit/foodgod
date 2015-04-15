@@ -1,0 +1,30 @@
+<fa-modifier fa-size="[375,567]">
+<fa-surface fa-background-color="'white'">
+<div ng-controller="FoodModalController">
+    <script type="text/ng-template" id="mainFoodPool.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in items">
+                    <a ng-click="addSelected(item)">{{ item }}</a>
+                </li>
+            </ul>
+            已选择: <b>{{ selected.selectedList }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+    <button class="btn btn-default" ng-click="open('mainFoodPool.html')">主食类</button>
+    <button class="btn btn-default" ng-click="open('mainFoodPool.html')">肉类</button>
+    <button class="btn btn-default" ng-click="open('mainFoodPool.html')">蔬菜</button>
+    <div ng-show="selected">添加食材: {{ selected }}</div>
+</div>
+<div class="col-xs-6" fa-tap="" ui-sref="home.selectfood">下一步</div>
+<div class="col-xs-6" fa-tap="" ui-sref="home.preview">完成</div>
+</fa-surface>
+</fa-modifier>

@@ -1,9 +1,54 @@
+<!-- <fa-modifier class="container" fa-size="[375,567]">
+<fa-surface>
+<div class="col-xs-12">
+<button>添加图片</button>
+<form class="form-horizontal" role="form" name="signupForm" ng-submit="processForm()" novalidate>
+	<h3>给菜谱起个好听的名字吧：</h3>
+	<p>{{menu.name}}</p>
+	<input type="text" ng-model="menu.name">
+	<span>
+	<div class="col-xs-6" fa-tap="" ui-sref="home.found">下一步</div>
+	<div class="col-xs-6" fa-tap="" ui-sref="home.found">完成</div>
+	</span>
+</form>
+</div>
+</fa-surface>
+</fa-modifier> -->
+<fa-modifier fa-size="[375,567]">
+<fa-surface fa-background-color="'white'"></fa-surface>
+</fa-modifier>
 
-<fa-image-surface
-             fa-image-url="images/200.jpg"
-             class="img"
-             fa-color="'blue'"
-             fa-background-color="'#fff'"
-             fa-size="[375, 567]">
-</fa-image-surface>
+<fa-surface>
+<fa-app style="height: 140px; width: 375px; margin: 0; background-color="black"">
+<fa-surface>
+	<div>
+		<carousel interval="myInterval">
+			<slide ng-repeat="slide in slides" active="slide.active">
+				<img ng-src="{{slide.image}}" style="margin:auto;">
+				<div class="carousel-caption">
+					<p>{{slide.text}}</p>
+				</div>
+			</slide> 
+		</carousel>
+	</div>
+</fa-surface>
+</fa-app>
 
+<fa-app style="height: 454; width: 375px; margin: 0;">
+<fa-modifier fa-size="[375, 454]" >
+	<fa-surface>
+<div class="col-xs-12">
+<form class="form-horizontal" role="form" name="signupForm" ng-submit="processForm()" novalidate>
+	<h3>给菜谱起个好听的名字吧：</h3>
+	<p>{{menu.name}}</p>
+	<input type="text" class="form-control" ng-model="menu.name">
+	<span>
+	<div class="col-xs-6" fa-tap="" ui-sref="home.selectfood">下一步</div>
+	<div class="col-xs-6" fa-tap="" ui-sref="home.preview">完成</div>
+	</span>
+</form>
+</div>
+</fa-surface>
+</fa-modifier>
+</fa-app>
+</fa-surface>
