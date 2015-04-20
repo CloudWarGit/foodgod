@@ -47,6 +47,9 @@ angular.module('famousAngularStarter',
       }).state('home.selectfood', {
         url: '/selectfood',
         templateUrl: 'partials/selectfood.html'
+      }).state('home.cooksteps', {
+        url: '/cooksteps',
+        templateUrl: 'partials/cooksteps.html'
       }).state('home.newdp', {
         url: '/newdinnerparty',
         templateUrl: 'partials/newdinnerparty.html'

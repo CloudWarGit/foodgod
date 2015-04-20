@@ -1,5 +1,16 @@
-<fa-surface>
-<div class="container">
-	<div></div>
+<fa-modifier fa-size="[375,567]">
+<fa-surface fa-background-color="'white'" class="famous-surface" ng-controller="CookStepController">
+<!-- <div class="container-fluid center-block" ng-repeat="step in steps">
+	<div class="center-block">
+		<span class="col-xs-8"><img src="#/" class="img-thumbnail img-responsive"><button>addpic</button></span>
+		<textarea class="col-xs-8"></textarea>
+	</div>
+</div> -->
+<div class="container-fluid center-block">
+<div class="center-block col-xs-12" ng-repeat="step in steps">
+	<span class="col-xs-8">Step {{step}}:<cooksteps></cooksteps></span>
+</div>
+<button ng-click="addStep()">添加步骤</button>
 </div>
 </fa-surface>
+</fa-modifier>

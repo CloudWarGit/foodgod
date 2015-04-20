@@ -27,3 +27,5 @@ body {
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
+.test{min-height:250px;overflow-y:auto;max-height:300px;} 
+
