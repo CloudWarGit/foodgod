@@ -34,8 +34,29 @@ angular.module('famousAngularStarter').controller('ModalInstanceCtrl', function 
     selectedList : []
   };
 
+  var array = $scope.selected.selectedList;
+
   $scope.addSelected = function (item) {
-    $scope.selected.selectedList.push(item);
+    var flag = false;
+    for (var i=0;i<array.length;i++) {
+      var temp = array[i];
+      if (item === temp) {
+        flag = true;
+      }
+    }
+    if (!flag) {
+      array.push(item);
+    }
+  };
+
+  $scope.deleteSelected = function (item) {
+    
+    for (var i=0;i<array.length;i++) {
+      var temp = array[i];
+      if (temp === item) {
+        array.splice(i,1);
+      }
+    }
   };
 
   $scope.ok = function () {

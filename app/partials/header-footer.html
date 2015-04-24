@@ -5,16 +5,19 @@
 		    </fa-render-node>
 		</fa-modifier>
 
-		
+		<fa-scroll-view>
+  		<fa-view>
 		<fa-modifier fa-size="[375, 567]">		
 			<fa-surface>
 			
-				<fa-app style="height: 567px; width: 375px; margin: 0">
-	  			<div ui-view ></div>
+				<fa-app style="height: 567px; width: 375px; margin: 0;overflow-y: scroll">
+	  			<div ui-view></div>
 				</fa-app>
 			
 			</fa-surface>
 		</fa-modifier>
+		</fa-view>
+		</fa-scroll-view> 		
 		
 	
         <fa-modifier fa-size="[undefined, 50]">

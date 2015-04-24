@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: sans-serif;
+
 }
 
 .center-box {
@@ -27,5 +28,7 @@ body {
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
-.test{min-height:250px;overflow-y:auto;max-height:300px;} 
+.content{height: 567px; width: 375px; margin: 0; overflow-y: scroll;-webkit-overflow-scrolling: touch;
+-moz-overflow-scrolling: touch;
+-o-overflow-scrolling: touch} 
 
