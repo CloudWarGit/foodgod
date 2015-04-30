@@ -43,7 +43,8 @@ angular.module('famousAngularStarter',
         }
       }).state('home.createmenu', {
         url: '/createmenu',
-        templateUrl: 'partials/createmenu.html'
+        templateUrl: 'partials/createmenu.html',
+        /*controller: 'CreateMenuController'*/
       }).state('home.selectfood', {
         url: '/selectfood',
         templateUrl: 'partials/selectfood.html'

@@ -21,6 +21,7 @@
 <fa-surface>
 <fa-app style="height: 140px; width: 375px; margin: 0; background-color="black"">
 <fa-surface>
+<!-- 用户添加图片，未完成 -->
 	<div>
 		<carousel interval="myInterval">
 			<slide ng-repeat="slide in slides" active="slide.active">
@@ -41,7 +42,7 @@
 <form class="form-horizontal" role="form" name="signupForm" ng-submit="processForm()" novalidate>
 	<h3>给菜谱起个好听的名字吧：</h3>
 	<p>{{menu.name}}</p>
-	<input type="text" class="form-control" ng-model="menu.name">
+	<input type="text" class="form-control" ng-model="menu.name" ng-init="">
 	<span>
 	<div class="col-xs-6" fa-tap="" ui-sref="home.selectfood">下一步</div>
 	<div class="col-xs-6" fa-tap="" ui-sref="home.preview">完成</div>
